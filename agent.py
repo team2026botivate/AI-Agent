@@ -136,7 +136,11 @@ def handle_conversation_node(state: AgentState):
             "chat_history": state["chat_history"]
         })
 
+        
+
         answer = result.content
+
+        print("AI Answer:", answer)
 
         # Update chat history correctly
         state["chat_history"].append(HumanMessage(content=question))
